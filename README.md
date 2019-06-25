@@ -101,7 +101,7 @@ docker start sf-notebook
 
 ## Additional handy commands
 
-- To delete the image
+- To delete the image. WARNING: If you do this, you will lose any notebook you have saved within the container.
 ```
 docker rm sf-notebook
 ```
