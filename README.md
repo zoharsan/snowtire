@@ -9,7 +9,7 @@ This docker image aims to provide Snowflake users with a turn key docker environ
 
 SQL Alchemy python package is also installed as part of this docker image.
 
-The base docker image is [Jupyter Docker Stacks] (https://github.com/jupyter/docker-stacks). More specifically, the image used is [jupyter/all-spark-notebook](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#jupyter-all-spark-notebook) which provides a comprehensive jupyter environment including r, sci-py, tensorflow, pyspark among others.
+The base docker image is [Jupyter Docker Stacks](https://github.com/jupyter/docker-stacks). More specifically, the image used is [jupyter/all-spark-notebook](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#jupyter-all-spark-notebook) which provides a comprehensive jupyter environment including r, sci-py, tensorflow, pyspark among others.
 
 # Prerequisites
 
