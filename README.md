@@ -61,7 +61,7 @@ Successfully tagged sf-jupyter:latest
 ```
 docker run -p 8888:8888 --name sf-notebook sf-jupyter:latest
 ```
-You should see a message like the following the very first time you bring up this image:
+You should see a message like the following the very first time you bring up this image. Copy the token value in the URL:
 ```
 [I 23:33:42.828 NotebookApp] Writing notebook server cookie secret to /home/jovyan/.local/share/jupyter/runtime/notebook_cookie_secret
 [I 23:33:43.820 NotebookApp] JupyterLab extension loaded from /opt/conda/lib/python3.7/site-packages/jupyterlab
