@@ -85,11 +85,11 @@ Open a web browser on: http://localhost:8888
 
 It will prompt you for a Password or token. Enter the token you have in the previous message.
 
-## Working
+## Working with the image
 
 You can now start uploading templates of jupyter notebooks. I recommend to always keep a local copy of your work once you are done. This can be done in the Jupyter menu: File->Download as.
 
-## Stopping and starting the docker image
+### Stopping and starting the docker image
 
 Once finished, you can stop the image with the following command:
 ```
@@ -100,7 +100,7 @@ If you want to resume work, you can start the image with the following command:
 docker start sf-notebook
 ```
 
-## Additional handy commands
+### Additional handy commands
 
 - To delete the image. WARNING: If you do this, you will lose any notebook, and any work you have saved or done within the container.
 ```
