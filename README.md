@@ -29,7 +29,7 @@ cd DockerImages
 git clone https://github.com/zoharsan/snowflake-jupyter.git
 cd snowflake-jupyter
 ```
-## Specify the driver levels you require by editing the Dockerfile at line 25:
+## Specify the driver levels
 
 First check the latest clients available in the official [Snowflake documentation](https://docs.snowflake.net/manuals/release-notes/client-change-log.html#client-changes-by-version)
 
