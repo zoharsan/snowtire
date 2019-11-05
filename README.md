@@ -106,7 +106,7 @@ The image come with 4 different small examples of python notebooks allowing to t
 
 These notebooks can work with the tpch_sf1 database which is provided as a sample within any Snowflake environment.
 
-If you plan to develop new notebooks within the Docker environment, in order to avoid using any work due to a Docker container discarded accidentally or any other container corruption, it is recommended to always keep a local copy of your work once you are done. This can be done in the Jupyter menu: File->Download as.
+If you plan to develop new notebooks within the Docker environment, in order to avoid losing any work due to a Docker container discarded accidentally or any other container corruption, it is recommended to always keep a local copy of your work once you are done. This can be done in the Jupyter menu: File->Download as.
 
 ### Stopping and starting the docker image
 
