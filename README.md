@@ -1,14 +1,14 @@
 # Introduction
 
-This docker image aims to provide Snowflake users with a turn key docker environment already set-up with Snowflake drivers on a Jupyter notebook to experiment the various Snowflake connectors available: 
+This docker image aims to provide Snowflake users with a turn key docker environment already set-up with Snowflake drivers of the version of your choice with a comprehensive data science environment including r, sci-py, tensorflow, pyspark among others as well as a Jupyter notebook to experiment the various Snowflake connectors available: 
 
 - ODBC
 - JDBC
 - Python Connector
 - Spark Connector
+- SnowSQL Client.
 
 SQL Alchemy python package is also installed as part of this docker image.
-The image also comes with the snowsql client CLI.
 
 The base docker image is [Jupyter Docker Stacks](https://github.com/jupyter/docker-stacks). More specifically, the image used is [jupyter/all-spark-notebook](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#jupyter-all-spark-notebook) which provides a comprehensive jupyter environment including r, sci-py, tensorflow, pyspark among others.
 
@@ -29,7 +29,15 @@ cd DockerImages
 git clone https://github.com/zoharsan/snowflake-jupyter.git
 cd snowflake-jupyter
 ```
+## Specify the driver levels you require by editing the Dockerfile at line 25:
 
+First check the latest clients available in the official [Snowflake documentation](https://docs.snowflake.net/manuals/release-notes/client-change-log.html#client-changes-by-version)
+
+Once you have chosen the versions, you can customize the line 25 in the Dockerfile. For example:
+
+```
+RUN odbc_version=2.20.0 jdbc_version=3.9.2 spark_version=2.5.4-spark_2.4 snowsql_version=1.1.86 /deploy_snowflake.sh
+```
 ## Build the docker image
 
 ```
@@ -62,6 +70,11 @@ Successfully tagged sf-jupyter:latest
 ```
 docker run -p 8888:8888 --name sf-notebook sf-jupyter:latest
 ```
+If the port 8888 is already taken on your laptop, and you want to use another port, you can simply change the port mapping. For example, for port 9999, it would be:
+```
+docker run -p 9999:8888 --name sf-notebook sf-jupyter:latest
+```
+
 You should see a message like the following the very first time you bring up this image. Copy the token value in the URL:
 ```
 [I 23:33:42.828 NotebookApp] Writing notebook server cookie secret to /home/jovyan/.local/share/jupyter/runtime/notebook_cookie_secret
@@ -87,7 +100,13 @@ It will prompt you for a Password or token. Enter the token you have in the prev
 
 ## Working with the image
 
-You can now start uploading templates of jupyter notebooks. I recommend to always keep a local copy of your work once you are done. This can be done in the Jupyter menu: File->Download as.
+The image come with 4 different small examples of python notebooks allowing to test various connectors including odbc, jdbc, spark. You can always upload to the jupyter environment any demo notebook from the main interface. See the Upload button at the top right:
+
+![Image](https://github.com/zoharsan/snowflake-jupyter-extras/blob/master/Notebooks.png)
+
+These notebooks can work with the tpch_sf1 database which is provided as a sample within any Snowflake environment.
+
+If you plan to develop new notebooks within the Docker environment, in order to avoid using any work due to a Docker container discarded accidentally or any other container corruption, it is recommended to always keep a local copy of your work once you are done. This can be done in the Jupyter menu: File->Download as.
 
 ### Stopping and starting the docker image
 
@@ -115,5 +134,8 @@ docker exec -it sf-notebook /bin/bash
 docker cp <absolute-file-name> sf-notebook:<absolute-path-name in the container>
 Example: docker cp README.md sf-notebook:/
 ```
-
+- To list all docker containers available:
+```
+docker ps -a
+```
 
