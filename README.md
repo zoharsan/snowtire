@@ -100,7 +100,9 @@ It will prompt you for a Password or token. Enter the token you have in the prev
 
 ## Working with the image
 
-The image come with 4 different small examples of python notebooks allowing to test various connectors including odbc, jdbc, spark. You can always upload to the jupyter environment any demo notebook from the main interface. See the Upload button at the top right:
+The image come with 4 different small examples of python notebooks allowing to test various connectors including odbc, jdbc, spark. You will need to customize your Snowflake account name, your credentials (user/password), database name and warehouse.
+
+You can always upload to the jupyter environment any demo notebook from the main interface. See the Upload button at the top right:
 
 ![Image](https://github.com/zoharsan/snowflake-jupyter-extras/blob/master/Notebooks.png)
 
