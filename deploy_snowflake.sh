@@ -18,8 +18,8 @@ export jdbc_file=${jdbc_file:-snowflake-jdbc-${jdbc_version}.jar}
 export scala_version=${scala_version:-2.11}
 export spark_version=${spark_version:-2.5.4-spark_2.4}
 export spark_file=${spark_file:-spark-snowflake_${scala_version}-${spark_version}.jar}
-export bootstrap_version=${bootstrap_version:-1.1}
 export snowsql_version=${snowsql_version:-1.1.85}
+export bootstrap_version=`echo ${snowsql_version}|cut -c -3`
 export snowsql_file=${snowsql_file:-snowsql-${snowsql_version}-linux_x86_64.bash}
 cd /
 
@@ -33,7 +33,7 @@ echo "Downloading spark driver version" ${spark_version} "..."
 curl -O http://repo1.maven.org/maven2/net/snowflake/spark-snowflake_${scala_version}/${spark_version}/${spark_file}
 
 echo "Download SnowSQL client version" ${snowsql_version} "..."
-curl -O http://s3-us-west-2.amazonaws.com/sfc-snowsql-updates/bootstrap/${bootstrap_version}/linux_x86_64/${snowsql_file}
+curl -O https://sfc-repo.snowflakecomputing.com/snowsql/bootstrap/${bootstrap_version}/linux_x86_64/${snowsql_file}
 
 tar -xzvf ${odbc_file}
 ./snowflake_odbc/iodbc_setup.sh
