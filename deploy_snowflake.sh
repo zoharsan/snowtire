@@ -30,7 +30,7 @@ echo "Downloading jdbc driver version" ${jdbc_version} "..."
 curl -O https://repo1.maven.org/maven2/net/snowflake/snowflake-jdbc/${jdbc_version}/${jdbc_file}
 
 echo "Downloading spark driver version" ${spark_version} "..."
-curl -O http://repo1.maven.org/maven2/net/snowflake/spark-snowflake_${scala_version}/${spark_version}/${spark_file}
+curl -O https://repo1.maven.org/maven2/net/snowflake/spark-snowflake_${scala_version}/${spark_version}/${spark_file}
 
 echo "Download SnowSQL client version" ${snowsql_version} "..."
 curl -O https://sfc-repo.snowflakecomputing.com/snowsql/bootstrap/${bootstrap_version}/linux_x86_64/${snowsql_file}
