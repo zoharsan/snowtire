@@ -38,7 +38,7 @@ First check the latest clients available in the official [Snowflake documentatio
 Once you have chosen the versions, you can customize the line 26 in the Dockerfile. For example:
 
 ```
-RUN odbc_version=2.20.0 jdbc_version=3.9.2 spark_version=2.5.4-spark_2.4 snowsql_version=1.1.86 /deploy_snowflake.sh
+RUN odbc_version=2.20.3 jdbc_version=3.11.1 spark_version=2.5.7-spark_2.4 snowsql_version=1.2.2 /deploy_snowflake.sh
 ```
 ## Build the docker image
 
