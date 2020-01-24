@@ -2,7 +2,7 @@
 #  All drivers: https://docs.snowflake.net/manuals/release-notes/client-change-log.html#client-changes-by-version
 #         ODBC:  https://sfc-repo.snowflakecomputing.com/odbc/linux/index.html
 #         JDBC:  https://repo1.maven.org/maven2/net/snowflake/snowflake-jdbc/
-#         Spark: http://repo1.maven.org/maven2/net/snowflake/spark-snowflake_2.11
+#         Spark: https://repo1.maven.org/maven2/net/snowflake/spark-snowflake_2.11
 #         Note: For Spark, the docker currently uses Spark 2.4 with Scala 2.11
 #    - Update line 21 with the correct levels to be deployed which executes deploy_snowflake.sh Script
 #
