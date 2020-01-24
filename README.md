@@ -35,7 +35,7 @@ cd snowflake-jupyter
 
 First check the latest clients available in the official [Snowflake documentation](https://docs.snowflake.net/manuals/release-notes/client-change-log.html#client-changes-by-version)
 
-Once you have chosen the versions, you can customize the line 25 in the Dockerfile. For example:
+Once you have chosen the versions, you can customize the line 26 in the Dockerfile. For example:
 
 ```
 RUN odbc_version=2.20.0 jdbc_version=3.9.2 spark_version=2.5.4-spark_2.4 snowsql_version=1.1.86 /deploy_snowflake.sh
