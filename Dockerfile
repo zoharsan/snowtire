@@ -16,6 +16,7 @@ RUN apt-get update
 RUN apt-get install -y apt-utils
 RUN apt-get install -y libssl-dev libffi-dev
 RUN apt-get install -y vim
+RUN sudo -u jovyan /opt/conda/bin/pip install --upgrade pyarrow
 RUN sudo -u jovyan /opt/conda/bin/pip install --upgrade snowflake-connector-python
 RUN sudo -u jovyan /opt/conda/bin/pip install --upgrade snowflake-sqlalchemy
 RUN conda install pyodbc
