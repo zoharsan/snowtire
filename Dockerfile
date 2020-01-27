@@ -23,10 +23,14 @@ RUN conda install pyodbc
 RUN apt-get install -y iodbc libiodbc2-dev libpq-dev libssl-dev
 COPY ./deploy_snowflake.sh /
 RUN chmod +x /deploy_snowflake.sh
-RUN odbc_version=2.20.0 jdbc_version=3.9.2 spark_version=2.5.4-spark_2.4 snowsql_version=1.1.86 /deploy_snowflake.sh
+RUN odbc_version=2.20.3 jdbc_version=3.11.1 spark_version=2.5.7-spark_2.4 snowsql_version=1.2.2 /deploy_snowflake.sh
 RUN mkdir /home/jovyan/samples
 COPY ./pyodbc.ipynb /home/jovyan/samples
 COPY ./Python.ipynb /home/jovyan/samples
 COPY ./spark.ipynb /home/jovyan/samples
 COPY ./SQLAlchemy.ipynb /home/jovyan/samples
 RUN chown -R jovyan:users /home/jovyan/samples
+RUN jupyter trust /home/jovyan/samples/pyodbc.ipynb
+RUN jupyter trust /home/jovyan/samples/Python.ipynb
+RUN jupyter trust /home/jovyan/samples/spark.ipynb
+RUN jupyter trust /home/jovyan/samples/SQLAlchemy.ipynb
