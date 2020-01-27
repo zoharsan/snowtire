@@ -142,4 +142,21 @@ Example: docker cp README.md sf-notebook:/
 ```
 docker ps -a
 ```
+### Troubleshooting
 
+In case you have the Python kernel dying while running the notebook, and you want to troubleshoot the root cause, please add these lines as your first paragraph of your notebook and execute the paragraph:
+```
+# Debugging
+
+import logging
+import os
+  
+for logger_name in ['snowflake','botocore','azure']:
+    logger = logging.getLogger(logger_name)
+    logger.setLevel(logging.DEBUG)
+    ch = logging.FileHandler('python_connector.log')
+    ch.setLevel(logging.DEBUG)
+    ch.setFormatter(logging.Formatter('%(asctime)s - %(threadName)s %(filename)s:%(lineno)d - %(funcName)s() - %(levelname)s - %(message)s'))
+    logger.addHandler(ch)
+```
+This will generate a python_connector.log file where the notebook resides. Use the commands above to ssh into the image and examine the log.
