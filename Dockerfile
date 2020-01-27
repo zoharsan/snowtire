@@ -30,7 +30,7 @@ COPY ./Python.ipynb /home/jovyan/samples
 COPY ./spark.ipynb /home/jovyan/samples
 COPY ./SQLAlchemy.ipynb /home/jovyan/samples
 RUN chown -R jovyan:users /home/jovyan/samples
-RUN sudo -u jovyan jupyter trust /home/jovyan/samples/pyodbc.ipynb
-RUN sudo -u jovyan jupyter trust /home/jovyan/samples/Python.ipynb
-RUN sudo -u jovyan jupyter trust /home/jovyan/samples/spark.ipynb
-RUN sudo -u jovyan jupyter trust /home/jovyan/samples/SQLAlchemy.ipynb
+RUN sudo -u jovyan /opt/conda/bin/jupyter trust /home/jovyan/samples/pyodbc.ipynb
+RUN sudo -u jovyan /opt/conda/bin/jupyter trust /home/jovyan/samples/Python.ipynb
+RUN sudo -u jovyan /opt/conda/bin/jupyter trust /home/jovyan/samples/spark.ipynb
+RUN sudo -u jovyan /opt/conda/bin/jupyter trust /home/jovyan/samples/SQLAlchemy.ipynb
