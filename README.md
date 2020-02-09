@@ -28,7 +28,7 @@ Change the Directory to a location where you are storing your Docker images:
 ```
 mkdir DockerImages
 cd DockerImages
-https://github.com/zoharsan/snowtire.git
+git clone https://github.com/zoharsan/snowtire.git
 cd snowtire
 ```
 ## Specify the driver levels
