@@ -28,8 +28,8 @@ Change the Directory to a location where you are storing your Docker images:
 ```
 mkdir DockerImages
 cd DockerImages
-git clone https://github.com/zoharsan/snowflake-jupyter.git
-cd snowflake-jupyter
+https://github.com/zoharsan/snowtire.git
+cd snowtire
 ```
 ## Specify the driver levels
 
@@ -43,7 +43,7 @@ RUN odbc_version=2.20.3 jdbc_version=3.11.1 spark_version=2.5.7-spark_2.4 snowsq
 ## Build the docker image
 
 ```
-docker build --pull --no-cache -t sf-jupyter .
+docker build --pull --no-cache -t snowtire .
 ```
 You may get some warnings which are non critical, and/or expected. You can safely ignore them:
 ```
@@ -65,16 +65,16 @@ grep: /etc/odbc.ini: No such file or directory
 
 You should see the following message at the very end:
 ```
-Successfully tagged sf-jupyter:latest
+Successfully tagged snowtire:latest
 ```
 
 ## Running the image
 ```
-docker run -p 8888:8888 --name sf-notebook sf-jupyter:latest
+docker run -p 8888:8888 --name snowtire-v0 snowtire:latest
 ```
 If the port 8888 is already taken on your laptop, and you want to use another port, you can simply change the port mapping. For example, for port 9999, it would be:
 ```
-docker run -p 9999:8888 --name sf-notebook sf-jupyter:latest
+docker run -p 9999:8888 --name snowtire-v0 snowtire:latest
 ```
 
 You should see a message like the following the very first time you bring up this image. Copy the token value in the URL:
@@ -116,27 +116,27 @@ If you plan to develop new notebooks within the Docker environment, in order to 
 
 Once finished, you can stop the image with the following command:
 ```
-docker stop sf-notebook
+docker stop snowtire-v0
 ```
 If you want to resume work, you can start the image with the following command:
 ```
-docker start sf-notebook
+docker start snowtire-v0
 ```
 
 ### Additional handy commands
 
 - To delete the image. WARNING: If you do this, you will lose any notebook, and any work you have saved or done within the container.
 ```
-docker rm sf-notebook
+docker rm snowtire-v0
 ```
 - To open a bash session on the docker container, which will be useful to use the snowsql interface:
 ```
-docker exec -it sf-notebook /bin/bash
+docker exec -it snowtire-v0 /bin/bash
 ```
 - To copy files in the docker container:
 ```
 docker cp <absolute-file-name> sf-notebook:<absolute-path-name in the container>
-Example: docker cp README.md sf-notebook:/
+Example: docker cp README.md snowtire-v0:/
 ```
 - To list all docker containers available:
 ```
