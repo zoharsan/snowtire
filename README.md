@@ -43,7 +43,7 @@ RUN odbc_version=2.20.3 jdbc_version=3.11.1 spark_version=2.5.7-spark_2.4 snowsq
 ## Build Snowtire docker image
 
 ```
-docker build --pull --no-cache -t snowtire .
+docker build --pull -t snowtire .
 ```
 You may get some warnings which are non critical, and/or expected. You can safely ignore them:
 ```
