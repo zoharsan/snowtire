@@ -1,6 +1,6 @@
 # Introduction
 
-This docker image aims to provide Snowflake users with a turn key docker environment already set-up with Snowflake drivers of the version of your choice with a comprehensive data science environment including r, sci-py, tensorflow, pyspark among others as well as a Jupyter notebook to experiment the various Snowflake connectors available: 
+Snowtire is a docker image aims to provide Snowflake users with a turn key docker environment already set-up with Snowflake drivers of the version of your choice with a comprehensive data science environment including Jupyter Notebooks, Python, Spark, R to experiment the various Snowflake connectors available: 
 
 - ODBC
 - JDBC
@@ -12,7 +12,7 @@ SQL Alchemy python package is also installed as part of this docker image.
 
 The base docker image is [Jupyter Docker Stacks](https://github.com/jupyter/docker-stacks). More specifically, the image used is [jupyter/all-spark-notebook](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#jupyter-all-spark-notebook) which provides a comprehensive jupyter environment including r, sci-py, pyspark and scala.
 
-**NOTE: This docker image is not officially supported by Snowflake, and is provided as-is.**
+**NOTE: Snowtire is not officially supported by Snowflake, and is provided as-is.**
 
 # Prerequisites
 
@@ -40,7 +40,7 @@ Once you have chosen the versions, you can customize the line 26 in the Dockerfi
 ```
 RUN odbc_version=2.20.3 jdbc_version=3.11.1 spark_version=2.5.7-spark_2.4 snowsql_version=1.2.2 /deploy_snowflake.sh
 ```
-## Build the docker image
+## Build Snowtire docker image
 
 ```
 docker build --pull --no-cache -t snowtire .
@@ -102,7 +102,7 @@ It will prompt you for a Password or token. Enter the token you have in the prev
 
 ## Working with the image
 
-The image come with 4 different small examples of python notebooks allowing to test various connectors including odbc, jdbc, spark. You will need to customize your Snowflake account name, your credentials (user/password), database name and warehouse.
+Snowtire come with 4 different small examples of python notebooks allowing to test various connectors including odbc, jdbc, spark. You will need to customize your Snowflake account name, your credentials (user/password), database name and warehouse.
 
 You can always upload to the jupyter environment any demo notebook from the main interface. See the Upload button at the top right:
 
