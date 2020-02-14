@@ -35,7 +35,7 @@ cd snowtire
 If you are just updating the repository to the latest version (always recommended before building a docker image). Run:
 
 ```
-git pull .
+git pull
 
 ```
 
