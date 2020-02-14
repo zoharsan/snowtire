@@ -127,27 +127,27 @@ If you plan to develop new notebooks within the Docker environment, in order to 
 
 Once finished, you can stop the image with the following command:
 ```
-docker stop snowtire-v0
+docker stop spare-0
 ```
 If you want to resume work, you can start the image with the following command:
 ```
-docker start snowtire-v0
+docker start spare-0
 ```
 
 ### Additional handy commands
 
 - To delete the image. WARNING: If you do this, you will lose any notebook, and any work you have saved or done within the container.
 ```
-docker rm snowtire-v0
+docker rm spare-0
 ```
 - To open a bash session on the docker container, which will be useful to use the snowsql interface:
 ```
-docker exec -it snowtire-v0 /bin/bash
+docker exec -it spare-0 /bin/bash
 ```
 - To copy files in the docker container:
 ```
-docker cp <absolute-file-name> sf-notebook:<absolute-path-name in the container>
-Example: docker cp README.md snowtire-v0:/
+docker cp <absolute-file-name> spare-0:<absolute-path-name in the container>
+Example: docker cp README.md spare-0:/
 ```
 - To list all docker containers available:
 ```
