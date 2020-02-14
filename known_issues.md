@@ -2,7 +2,7 @@
 
 #### 2019-02-14:
 
-- ZN: SnowSQL CLI version 1.2.4 has deployment issues which will be fixed in 1.2.5. As a workaround, just build the docker with 1.2.2, and launching SnowSQL will refresh the image.
+- ZN: SnowSQL CLI version 1.2.4 has deployment issues which will be fixed in 1.2.5. As a workaround, just build the docker with 1.2.2, and launching SnowSQL will auto-upgrade the image.
 - PG: To allow reads against GCP, add the following option to the Spark connector:
 ```
 'use_copy_unload':'false'
