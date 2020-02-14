@@ -32,7 +32,7 @@ git clone https://github.com/zoharsan/snowtire.git
 cd snowtire
 ```
 
-If you are just updating the repository to the latest version (always recommended before building a docker image). Run:
+If you are just updating the repository to the latest version (always recommended before building a docker image). Run the following command from within your local clone (under snowtire directory):
 
 ```
 git pull
@@ -81,11 +81,11 @@ Successfully tagged snowtire:latest
 
 ## Running the image
 ```
-docker run -p 8888:8888 --name snowtire-v0 snowtire:latest
+docker run -p 8888:8888 --name spare-0 snowtire:latest
 ```
 If the port 8888 is already taken on your laptop, and you want to use another port, you can simply change the port mapping. For example, for port 9999, it would be:
 ```
-docker run -p 9999:8888 --name snowtire-v0 snowtire:latest
+docker run -p 9999:8888 --name spare-1 snowtire:latest
 ```
 
 You should see a message like the following the very first time you bring up this image. Copy the token value in the URL:
