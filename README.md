@@ -31,6 +31,14 @@ cd DockerImages
 git clone https://github.com/zoharsan/snowtire.git
 cd snowtire
 ```
+
+If you are just updating the repository to the latest version (always recommended before building a docker image). Run:
+
+```
+git pull .
+
+```
+
 ## Specify the driver levels
 
 First check the latest clients available in the official [Snowflake documentation](https://docs.snowflake.net/manuals/release-notes/client-change-log.html#client-changes-by-version)
