@@ -10,7 +10,7 @@
 #
 
 #Start from the following core stack version
-FROM jupyter/all-spark-notebook:latest
+FROM jupyter/all-spark-notebook:1c8073a927aa
 USER root
 RUN apt-get update
 RUN apt-get install -y apt-utils
