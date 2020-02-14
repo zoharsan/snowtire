@@ -145,6 +145,11 @@ Example: docker cp README.md snowtire-v0:/
 ```
 docker ps -a
 ```
+
+### Known Issues
+
+Please check [known issues](known_issues.md) log. 
+
 ### Troubleshooting
 
 In case you have the Python kernel dying while running the notebook, and you want to troubleshoot the root cause, please add these lines as your first paragraph of your notebook and execute the paragraph:
