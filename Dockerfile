@@ -12,13 +12,15 @@
 #Start from the following core stack version
 FROM jupyter/all-spark-notebook:1c8073a927aa
 USER root
-RUN apt-get update
-RUN apt-get install -y apt-utils
-RUN apt-get install -y libssl-dev libffi-dev
-RUN apt-get install -y vim
-RUN sudo -u jovyan /opt/conda/bin/pip install --upgrade pyarrow
-RUN sudo -u jovyan /opt/conda/bin/pip install --upgrade snowflake-connector-python
-RUN sudo -u jovyan /opt/conda/bin/pip install --upgrade snowflake-sqlalchemy
+RUN apt-get update && \
+    apt-get install -y apt-utils && \
+    apt-get install -y libssl-dev libffi-dev && \
+    apt-get install -y vim
+RUN sudo -u jovyan /opt/conda/bin/python -m pip install --upgrade pip
+RUN sudo -u jovyan /opt/conda/bin/python -m pip install --upgrade pyarrow
+RUN sudo -u jovyan /opt/conda/bin/python -m pip install --upgrade snowflake-connector-python
+RUN sudo -u jovyan /opt/conda/bin/python -m pip install --upgrade snowflake-sqlalchemy
+RUN sudo -u jovyan /opt/conda/bin/python -m pip install --upgrade plotly
 RUN conda install pyodbc
 RUN apt-get install -y iodbc libiodbc2-dev libpq-dev libssl-dev
 COPY ./deploy_snowflake.sh /
