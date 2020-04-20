@@ -105,6 +105,12 @@ You should see a message like the following the very first time you bring up thi
         http://(a8e53cbad3a0 or 127.0.0.1):8888/?token=eb2222f1a8cd14046ecc5177d4b1b5965446e3c34b8f42ad
 ```
 
+**Note:** If you are restarting the image, and you need to retrieve the token you can retrieve its value from the docker logs as following:
+
+```
+docker logs spare-0 --tail 10
+```
+
 ## Accessing the image
 
 Open a web browser on: http://localhost:8888
