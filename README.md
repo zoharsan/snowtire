@@ -46,7 +46,7 @@ First check the latest clients available in the official [Snowflake documentatio
 Once you have chosen the versions, you can customize the line 26 in the Dockerfile. For example:
 
 ```
-RUN odbc_version=2.20.3 jdbc_version=3.11.1 spark_version=2.5.7-spark_2.4 snowsql_version=1.2.2 /deploy_snowflake.sh
+RUN odbc_version=2.21.1 jdbc_version=3.12.3 spark_version=2.7.0-spark_2.4 snowsql_version=1.2.5 /deploy_snowflake.sh
 ```
 
 **NOTE: SnowSQL CLI has the ability to [auto-upgrade](https://docs.snowflake.net/manuals/user-guide/snowsql-install-config.html#label-understanding-auto-upgrades) to the latest version available. So, you may not need to specify a higher version.**
