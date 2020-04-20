@@ -18,7 +18,7 @@ RUN apt-get update && \
     apt-get install -y vim
 RUN sudo -u jovyan /opt/conda/bin/python -m pip install --upgrade pip
 RUN sudo -u jovyan /opt/conda/bin/python -m pip install --upgrade pyarrow
-RUN sudo -u jovyan /opt/conda/bin/python -m pip install --upgrade snowflake-connector-python
+RUN sudo -u jovyan /opt/conda/bin/python -m pip install --upgrade snowflake-connector-python[pandas]
 RUN sudo -u jovyan /opt/conda/bin/python -m pip install --upgrade snowflake-sqlalchemy
 RUN sudo -u jovyan /opt/conda/bin/python -m pip install --upgrade plotly
 RUN conda install pyodbc
