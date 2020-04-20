@@ -25,7 +25,7 @@ RUN conda install pyodbc
 RUN apt-get install -y iodbc libiodbc2-dev libpq-dev libssl-dev
 COPY ./deploy_snowflake.sh /
 RUN chmod +x /deploy_snowflake.sh
-RUN odbc_version=2.20.3 jdbc_version=3.11.1 spark_version=2.5.7-spark_2.4 snowsql_version=1.2.2 /deploy_snowflake.sh
+RUN odbc_version=2.21.1 jdbc_version=3.12.3 spark_version=2.7.0-spark_2.4 snowsql_version=1.2.5 /deploy_snowflake.sh
 RUN mkdir /home/jovyan/samples
 COPY ./pyodbc.ipynb /home/jovyan/samples
 COPY ./Python.ipynb /home/jovyan/samples
