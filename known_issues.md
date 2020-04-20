@@ -1,5 +1,9 @@
 # Known issues / Gotchas
 
+#### 2020-04-20:
+
+- ZN: Fixed Dockerfile to pull the pandas optimized connector for snowflake (snowflake-connector-python[pandas]).
+
 #### 2019-02-14:
 
 - ZN: SnowSQL CLI version 1.2.4 has deployment issues which will be fixed in 1.2.5. As a workaround, just build the docker with 1.2.2, and launching SnowSQL will auto-upgrade the image.
