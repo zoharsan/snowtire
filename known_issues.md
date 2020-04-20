@@ -1,8 +1,9 @@
-# Known issues / Gotchas
+# Known issues / Change Log / Gotchas
 
 #### 2020-04-20:
 
 - ZN: Fixed Dockerfile to pull the pandas optimized connector for snowflake (snowflake-connector-python[pandas]).
+- ZN: Tested latest drivers as of to date, including latest Spark Optimized driver version 2.7 and updated Dockerfile.
 
 #### 2019-02-14:
 
