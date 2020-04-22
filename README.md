@@ -162,9 +162,17 @@ docker ps -a
 
 ### Known Issues & Troubleshooting
 
-#### Known Issues Log
-Please check [known issues](known_issues.md) log. 
+#### Stability: Notebook hangs or crashes on large data sets
 
+Make sure you have enough memory allocated for your Docker Workstation, at least 4 GB. On Mac:
+
+- Stop all your docker images (See instructions above to stop/start docker images).
+- Click on the Docker Icon on the top right hand side of your Mac Menu bar.
+- Select Preferences
+- Select Resources
+- Set CPUs to minimum of 2.
+- Set Memory to 4 GB.
+- Click on Apply & Restart.
 
 #### Python Kernel Dying
 
@@ -185,14 +193,6 @@ for logger_name in ['snowflake','botocore','azure']:
 ```
 This will generate a python_connector.log file where the notebook resides. Use the commands above to ssh into the image and examine the log.
 
-#### Stability: Notebook Hanging or Crashing on large datasets.
+#### Known Issues Log
 
-Make sure you have enough memory allocated for your Docker Workstation, at least 4 GB. On Mac:
-
-- Stop all your docker images (See instructions above to stop/start docker images).
-- Click on the Docker Icon on the top right hand side of your Mac Menu bar.
-- Select Preferences
-- Select Resources
-- Set CPUs to minimum of 2.
-- Set Memory to 4 GB.
-- Click on Apply & Restart
+Please check [known issues](known_issues.md) log. 
