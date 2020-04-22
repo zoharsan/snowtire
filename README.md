@@ -198,4 +198,4 @@ This will generate a python_connector.log file where the notebook resides. Use t
 ---
 #### Known Issues Log ####
 
-Please check [known issues](known_issues.md) log. 
+Please check [known issues](known_issues.md) log for known issues with Snowtire. 
