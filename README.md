@@ -162,7 +162,8 @@ docker ps -a
 
 ### Known Issues & Troubleshooting
 
-**- Stability: Notebook hangs or crashes on large data sets**
+---
+#### Stability: Notebook hangs or crashes on large data sets ####
 
 Make sure you have enough memory allocated for your Docker Workstation, at least 4 GB. On Mac:
 
@@ -174,7 +175,8 @@ Make sure you have enough memory allocated for your Docker Workstation, at least
 - Set Memory to 4 GB.
 - Click on Apply & Restart.
 
-**- Python Kernel Dying**
+---
+#### Python Kernel Dying ####
 
 In case you have the Python kernel dying while running the notebook, and you want to troubleshoot the root cause, please add these lines as your first paragraph of your notebook and execute the paragraph:
 ```
@@ -193,6 +195,7 @@ for logger_name in ['snowflake','botocore','azure']:
 ```
 This will generate a python_connector.log file where the notebook resides. Use the commands above to ssh into the image and examine the log.
 
-**- Known Issues Log**
+---
+#### Known Issues Log ####
 
 Please check [known issues](known_issues.md) log. 
