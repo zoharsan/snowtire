@@ -6,7 +6,7 @@
 #     - Please check the following URLs for the driver to pick up:
 #         ODBC:  https://sfc-repo.snowflakecomputing.com/odbc/linux/index.html
 #         JDBC:  https://repo1.maven.org/maven2/net/snowflake/snowflake-jdbc/
-#         Spark: http://repo1.maven.org/maven2/net/snowflake/spark-snowflake_2.11
+#         Spark: https://repo1.maven.org/maven2/net/snowflake/spark-snowflake_2.11
 #         Note: For Spark, the docker currently uses Spark 2.4 with Scala 2.11
 
 #!/bin/bash
