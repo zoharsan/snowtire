@@ -1,7 +1,7 @@
 # Script version v1.0
 # Author: Zohar Nissare-Houssen
 # E-mail: z.nissare-houssen@snowflake.com
-#'
+#
 # README:
 #     - Please check the following URLs for the driver to pick up:
 #         ODBC:  https://sfc-repo.snowflakecomputing.com/odbc/linux/index.html
