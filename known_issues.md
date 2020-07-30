@@ -1,5 +1,10 @@
 # Known issues / Change Log / Gotchas
 
+#### 2020-07-30:
+
+- ZN: Added conda install of jupyterlab-plotly-extension to allow plotly visualizations when using jupyterlab mode. Note that this will require a restart of your web browser for the change to take effect.
+
+
 #### 2020-04-20:
 
 - ZN: Fixed Dockerfile to pull the pandas optimized connector for snowflake (snowflake-connector-python[pandas]).
