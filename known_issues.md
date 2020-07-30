@@ -3,6 +3,7 @@
 #### 2020-07-30:
 
 - ZN: Added conda install of jupyterlab-plotly-extension to allow plotly visualizations when using jupyterlab mode. Note that this will require a restart of your web browser for the change to take effect.
+- ZN: Tested latest drivers as of to date and updated Dockerfile.
 
 
 #### 2020-04-20:
