@@ -2,6 +2,13 @@
 
 #### 2020-09-14
 - ZN: Tested latest drivers as of to date and updated Dockerfile.
+- ZN: Fixed line 26 to remove libpq-dev to prevent the following error:
+
+```E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/p/postgresql-10/libpq5_10.12-0ubuntu0.18.04.1_amd64.deb  404  Not Found [IP: XXXXX 80]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/p/postgresql-10/libpq-dev_10.12-0ubuntu0.18.04.1_amd64.deb  404  Not Found [IP: XXXXX 80]
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+The command '/bin/sh -c apt-get install -y iodbc libiodbc2-dev libpq-dev libssl-dev' returned a non-zero code: 100
+```
 
 #### 2020-07-30:
 
