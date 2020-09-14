@@ -26,7 +26,7 @@ RUN conda install -c conda-forge jupyterlab-plotly-extension --yes
 RUN apt-get install -y iodbc libiodbc2-dev libpq-dev libssl-dev
 COPY ./deploy_snowflake.sh /
 RUN chmod +x /deploy_snowflake.sh
-RUN odbc_version=2.21.7 jdbc_version=3.12.9 spark_version=2.8.1-spark_2.4 snowsql_version=1.2.7 /deploy_snowflake.sh
+RUN odbc_version=2.21.8 jdbc_version=3.12.10 spark_version=2.8.1-spark_2.4 snowsql_version=1.2.9 /deploy_snowflake.sh
 RUN mkdir /home/jovyan/samples
 COPY ./pyodbc.ipynb /home/jovyan/samples
 COPY ./Python.ipynb /home/jovyan/samples
