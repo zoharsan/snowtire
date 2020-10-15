@@ -12,6 +12,8 @@ SQL Alchemy python package is also installed as part of this docker image.
 
 The base docker image is [Jupyter Docker Stacks](https://github.com/jupyter/docker-stacks). More specifically, the image used is [jupyter/all-spark-notebook](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#jupyter-all-spark-notebook) which provides a comprehensive jupyter environment including r, sci-py, pyspark and scala.
 
+Please review the [licensing terms](https://raw.githubusercontent.com/jupyter/docker-stacks/master/LICENSE.md) of the above mentioned project.
+
 **NOTE: Snowtire is not officially supported by Snowflake, and is provided as-is.**
 
 # Prerequisites
