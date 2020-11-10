@@ -217,7 +217,7 @@ for logger_name in ['snowflake','botocore','azure']:
 This will generate a python_connector.log file where the notebook resides. Use the commands above to ssh into the image and examine the log.
 
 ---
-#### Line Endings on Windows ####
+#### Building the Docker Image fails on Windows ####
 
 Building the docker image fails on Windows with the following errors:
 
