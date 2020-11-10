@@ -217,6 +217,32 @@ for logger_name in ['snowflake','botocore','azure']:
 This will generate a python_connector.log file where the notebook resides. Use the commands above to ssh into the image and examine the log.
 
 ---
+#### Line Endings on Windows ####
+
+Building the docker image fails on Windows with the following errors:
+
+```
+Step 14/24 : RUN odbc_version=2.21.8 jdbc_version=3.12.10 spark_version=2.8.1-spark_2.4 snowsql_version=1.2.9 /deploy_snowflake.sh
+ ---> Running in 0cfd230c3949
+: not foundwflake.sh: 11: /deploy_snowflake.sh:
+: not foundwflake.sh: 13: /deploy_snowflake.sh:
+/deploy_snowflake.sh: 24: cd: can't cd to /
+: not foundwflake.sh: 25: /deploy_snowflake.sh:
+ ...loading odbc driver version 2.21.8
+curl: (3) URL using bad/illegal format or missing URL
+ ...loading jdbc driver version 3.12.10
+: not foundwflake.sh: 28: /deploy_snowflake.sh:
+curl: (3) URL using bad/illegal format or missing URL
+ ...loading spark driver version 2.8.1-spark_2.4
+: not foundwflake.sh: 31: /deploy_snowflake.sh:
+curl: (3) URL using bad/illegal format or missing URL
+ ...load SnowSQL client version 1.2.9
+...
+```
+This is caused to Windows CRLF line ending special characters added to the deploy_snowflake.sh script causing the script to fail in the Linux Ubuntu container. Edit the deploy_snowflake.sh with an Editor like Notepad++ to convert CRLF to LF line endings, save and rerun the script.
+
+
+---
 #### Known Issues Log ####
 
 Please check [known issues](known_issues.md) log for known issues with Snowtire. 
