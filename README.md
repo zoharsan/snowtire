@@ -239,7 +239,7 @@ curl: (3) URL using bad/illegal format or missing URL
  ...load SnowSQL client version 1.2.9
 ...
 ```
-This is caused by Windows CRLF line ending special characters added to the deploy_snowflake.sh script causing the script to fail in the Linux Ubuntu container. Open the deploy_snowflake.sh with an Editor like Notepad++ and save the file in UNIX mode which will convert CRLF to LF line endings and rerun the script.
+This is caused by Windows CRLF line ending special characters added to the deploy_snowflake.sh script causing the script to fail in the Linux Ubuntu container. Open the deploy_snowflake.sh with an Editor like Notepad++ and save the file in UNIX mode which will convert CRLF to LF line endings and rerun the docker build command.
 
 
 ---
