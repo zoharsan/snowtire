@@ -18,8 +18,13 @@ Please review the [licensing terms](https://raw.githubusercontent.com/jupyter/do
 
 # Prerequisites
 
-- You need git on your Mac.
-- You need to download and install [Docker Desktop for Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac). You may need to create an account on Docker to be able to download it.
+- You need git on your Mac or Windows
+- You need to download and install [Docker Desktop for Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac) or [Docker Desktop for Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows). You may need to create an account on Docker to be able to download it.
+
+**NOTE FOR WINDOWS**
+
+On Windows, a common issue encountered is the configuration of line endings, which adds default CRLF Windows line endings to the script deploy_snowflake.sh causing the script to fail. You can either configure [```core.autocrlf```](https://docs.github.com/en/free-pro-team@latest/github/using-git/configuring-git-to-handle-line-endings#refreshing-a-repository-after-changing-line-endings) to ```false```, or use an editor like Notepad+++ which allows to convert CRLF line endings into LF before you build the snowtire docker image.
+
 
 # Instructions
 
