@@ -23,7 +23,7 @@ Please review the [licensing terms](https://raw.githubusercontent.com/jupyter/do
 
 **NOTE FOR WINDOWS**
 
-On Windows, a common issue encountered is the configuration of line endings, which adds default CRLF Windows line endings to the script deploy_snowflake.sh causing the script to fail. You can either configure [```core.autocrlf```](https://docs.github.com/en/free-pro-team@latest/github/using-git/configuring-git-to-handle-line-endings#refreshing-a-repository-after-changing-line-endings) to ```false```, or use an editor like Notepad+++ which allows to convert CRLF line endings into LF before you build the snowtire docker image.
+On Windows, a common issue encountered is the configuration of line endings, which adds default CRLF Windows line endings to the script deploy_snowflake.sh causing the script to fail. You can either configure [```core.autocrlf```](https://docs.github.com/en/free-pro-team@latest/github/using-git/configuring-git-to-handle-line-endings#refreshing-a-repository-after-changing-line-endings) to ```false```, or use an editor like Notepad+++ to open the deploy_snowflake.sh file and save it in UNIX mode which will convert CRLF line endings into LF before you build the snowtire docker image.
 
 
 # Instructions
@@ -239,7 +239,7 @@ curl: (3) URL using bad/illegal format or missing URL
  ...load SnowSQL client version 1.2.9
 ...
 ```
-This is caused by Windows CRLF line ending special characters added to the deploy_snowflake.sh script causing the script to fail in the Linux Ubuntu container. Edit the deploy_snowflake.sh with an Editor like Notepad++ to convert CRLF to LF line endings, save and rerun the script.
+This is caused by Windows CRLF line ending special characters added to the deploy_snowflake.sh script causing the script to fail in the Linux Ubuntu container. Open the deploy_snowflake.sh with an Editor like Notepad++ and save the file in UNIX mode which will convert CRLF to LF line endings and rerun the script.
 
 
 ---
