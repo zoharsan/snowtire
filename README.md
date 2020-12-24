@@ -163,7 +163,7 @@ docker start spare-0
 
 ### Additional handy commands
 
-- To delete the image. WARNING: If you do this, you will lose any notebook, and any work you have saved or done within the container.
+- To delete the container. WARNING: If you do this, you will lose any notebook, and any work you have saved or done within the container.
 ```
 docker rm spare-0
 ```
@@ -180,6 +180,15 @@ Example: docker cp README.md spare-0:/
 ```
 docker ps -a
 ```
+- To list all docker images available:
+```
+docker image ls
+```
+- To delete a docker image:
+```
+docker image rm <image-id>
+```
+You can find out the image id in the previous list command.
 
 ### Known Issues & Troubleshooting
 
