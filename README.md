@@ -1,3 +1,5 @@
+# THIS REPOSITORY IS DEPRECATED: PLEASE USE THE [SNOWTIRE_V2 REPO](https://github.com/zoharsan/snowtire_v2) 
+
 # Introduction
 
 Snowtire is a docker image which aims to provide Snowflake users with a turn key docker environment already set-up with Snowflake drivers of the version of your choice with a comprehensive data science environment including Jupyter Notebooks, Python, Spark, R to experiment the various Snowflake connectors available: 
